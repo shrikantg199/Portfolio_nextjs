@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* Default light mode styles */
+  :root {
+    @apply bg-white text-black;
+  }
+
+  /* Dark mode styles */
+  .darkMode {
+    @apply bg-black text-white;
+  }
+}
+/* Define the keyframes for the slide-up animation */
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the element */
+.slide-up-animation {
+  animation: slideUp 1s ease;
+  /* Adjust the animation duration and easing as needed */
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+/* Scrollbar Handle */
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+}
+
+/* For Firefox */
+.scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #f1f1f1 #888;
+}
