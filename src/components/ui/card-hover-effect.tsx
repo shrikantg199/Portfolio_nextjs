@@ -1,7 +1,6 @@
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
-
 import { useState } from "react";
 
 export const HoverEffect = ({
@@ -10,7 +9,7 @@ export const HoverEffect = ({
 }: {
   items: {
     title: string;
-    image: StaticImageData;
+    image: string;
     category: "frontend" | "backend";
   }[];
   className?: string;

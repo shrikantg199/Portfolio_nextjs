@@ -1,5 +1,5 @@
 import { HoverEffect } from "./ui/card-hover-effect";
-
+import { StaticImageData } from "next/image"
 export function Skills() {
   return (
     <div className="max-w-5xl mx-auto px-8">
@@ -7,7 +7,7 @@ export function Skills() {
     </div>
   );
 }
-export const projects = [
+export const projects: { title: string; image: string; category: "frontend" | "backend"; }[] = [
   {
     title: "HTML",
     image: "/html.png",
