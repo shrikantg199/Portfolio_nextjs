@@ -9,6 +9,7 @@ import Navbar from "@/components/Navbar";
 import About from "@/components/About";
 import { Skills } from "@/components/Skills";
 import { Portfolio } from "@/components/Portfolio";
+
 const Home: React.FC = () => {
   return (
     <TracingBeam className="px-6">
@@ -35,15 +36,15 @@ const Home: React.FC = () => {
           <About />
         </Element>
         {/* portfolio Page section content */}
-        <Element name="portfolio" className="h-screen py-20">
-          <h2 className="text-3xl m-6 text-center md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+        <Element name="portfolio" className="h-screen py-24 ">
+          <h2 className="text-3xl  text-center md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
             <span className="text-[#7743db]">{"<"}</span>Portfolio{" "}
             <span className="text-[#7743db]">{"/>"}</span>
-            <div className="m-3">
-              {" "}
-              <Portfolio />
-            </div>
           </h2>
+          <div className="my-8">
+            {" "}
+            <Portfolio />
+          </div>
         </Element>
         {/* Skills Page section content */}
         <Element name="skills" className="h-full py-20">

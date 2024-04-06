@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoLogoGithub } from "react-icons/io5";
 import Link from "next/link";
+
 const Home = () => {
   const desc = `Proficient full-stack developer adept in React, Tailwind, ExpressJS, MongoDB, excelling in innovative problem-solving.
 `;

@@ -3,6 +3,7 @@ import React, { useRef } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { motion } from "framer-motion";
 import { cn } from "@/utils/cn";
+import Link from "next/link";
 
 export const StickyScroll = ({
   content,
@@ -12,6 +13,7 @@ export const StickyScroll = ({
     title: string;
     description: string;
     content?: React.ReactNode | any;
+    Link: string;
   }[];
   contentClassName?: string;
 }) => {
@@ -51,13 +53,16 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 scrollbar  rounded-xl p-10"
+      className="h-[30rem]  overflow-y-auto flex justify-start relative space-x-10 scrollbar  rounded-xl p-1 md:p-10"
       ref={ref}
     >
-      <div className="div relative flex items-start px-4 ">
-        <div className="max-w-2xl ">
+      <div className="div relative flex items-start  ">
+        <div className="max-w-8xl  ">
           {content.map((item, index) => (
-            <div key={item.title + index} className="my-20 ">
+            <div
+              key={item.title + index}
+              className="my-12  md:px-4  text-start "
+            >
               <motion.h2
                 initial={{
                   opacity: 0,
@@ -79,6 +84,11 @@ export const StickyScroll = ({
                 className="text-lg font-normal  text-slate-300 max-w-sm mt-10"
               >
                 {item.description}
+                <div className="flex justify-center items-center">
+                  <Link href={item.Link} className="text-blue-600 ">
+                    Link 🚀
+                  </Link>
+                </div>
               </motion.p>
             </div>
           ))}
