@@ -17,6 +17,7 @@
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.3.0",
     "clsx": "^2.1.0",
+    "eslint-plugin-react-hooks": "^5.1.0-canary-e3ebcd54b-20240405",
     "framer-motion": "^11.0.24",
     "next": "14.1.4",
     "punycode.js": "^2.3.1",

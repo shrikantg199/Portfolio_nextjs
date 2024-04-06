@@ -11,6 +11,7 @@ const About: React.FC = () => {
           width={100}
           height={100}
           style={{ height: "300px", width: "auto" }}
+          unoptimized
         />
       </div>
       <div className="w-full ">
