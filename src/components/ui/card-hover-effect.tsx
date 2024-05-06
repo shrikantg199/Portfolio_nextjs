@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/utils/cn";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
@@ -17,30 +18,19 @@ export const HoverEffect = ({
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   const [selectedCategory, setSelectedCategory] = useState<
-    "all" | "frontend" | "backend"
-  >("all");
+    "frontend" | "backend"
+  >("frontend");
 
-  const handleCategoryChange = (category: "all" | "frontend" | "backend") => {
+  const handleCategoryChange = (category: "frontend" | "backend") => {
     setSelectedCategory(category);
   };
-  const filteredTechnologies =
-    selectedCategory === "all"
-      ? items
-      : items.filter(
-          (tech) => tech.category.toLowerCase() === selectedCategory
-        );
+  const filteredTechnologies = items.filter(
+    (tech) => tech.category.toLowerCase() === selectedCategory
+  );
   //console.log("Filtered Technologies:", filteredTechnologies);
   return (
     <>
       <div className="flex justify-center items-center">
-        <button
-          onClick={() => handleCategoryChange("all")}
-          className={`border px-3 py-1 mx-2 rounded-xl ${
-            selectedCategory === "all" ? "text-white bg-blue-700" : "text-white"
-          } `}
-        >
-          All
-        </button>
         <button
           onClick={() => handleCategoryChange("frontend")}
           className={`border px-3 py-1 mx-2 rounded-xl ${

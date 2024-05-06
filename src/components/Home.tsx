@@ -10,7 +10,7 @@ import { IoLogoGithub } from "react-icons/io5";
 import Link from "next/link";
 
 const Home = () => {
-  const desc = `Proficient full-stack developer adept in React, Tailwind, ExpressJS, MongoDB, excelling in innovative problem-solving.
+  const desc = `I'll design and build a custom website using HTML, CSS, JavaScript,ReactJS,NextJS and a backend technology of Node.js and MongoDB.
 `;
 
   const words = [
@@ -37,8 +37,16 @@ const Home = () => {
         }
       >
         <div className="z-10 relative  w-full text-center ">
-          {" "}
-          <h1 className="text-3xl mt-32  md:mt-4 md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 ">
+          <div className="flex justify-center items-center">
+            <Image
+              src="/hero.jpg"
+              className="rounded-full"
+              width={150}
+              height={100}
+              alt="hero"
+            />
+          </div>
+          <h1 className="text-3xl mt-8  md:mt-4 md:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">
             Shrikant Gaikwad
           </h1>
           <h1 className=" mt-2 text-3xl  md:mt-4 md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-900 to-neutral-300 ">
@@ -93,6 +101,6 @@ const TitleComponent = ({
       alt="thumbnail"
       className=" rounded-full border-2 border-white"
     />
-    <p>{title}</p>
+    <h1>{title}</h1>
   </div>
 );
