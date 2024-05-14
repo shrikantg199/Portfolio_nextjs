@@ -9,7 +9,7 @@ const Home: FC = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 1000);
+    }, 600);
     return () => clearTimeout(timer);
   }, []);
 
