@@ -15,7 +15,7 @@ const About: React.FC = () => {
         />
       </div>
       <div className="w-full ">
-        <p className="p-4 my-4">
+        <p className="md:p-4 p-2 md:my-2">
           I have strong technical skills including frontend development with
           React, backend development with Node.js and Express, and database
           management with MongoDB.

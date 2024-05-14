@@ -44,7 +44,7 @@ const Home = () => {
           <h1 className="text-3xl mt-8  md:mt-4 md:text-5xl font-bold bg-gradient-to-r from-purple-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent">
             Shrikant Gaikwad
           </h1>
-          <h1 className=" mt-2 text-3xl  md:mt-4 md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-900 to-neutral-300 ">
+          <h1 className=" mt-2 text-xl  md:mt-4 md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-900 to-neutral-300 ">
             {"<"}
             <ReactTyped
               strings={strings}
