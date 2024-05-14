@@ -8,6 +8,7 @@ import { FaLinkedin } from "react-icons/fa";
 import { RiTwitterXLine } from "react-icons/ri";
 import { IoLogoGithub } from "react-icons/io5";
 import Link from "next/link";
+import { ReactTyped } from "react-typed";
 
 const Home = () => {
   const desc = `I'll design and build a custom website using HTML, CSS, JavaScript,ReactJS,NextJS and a backend technology of Node.js and MongoDB.
@@ -15,17 +16,11 @@ const Home = () => {
 
   const words = [
     {
-      text: "Full",
-    },
-    {
-      text: "Stack",
-    },
-
-    {
-      text: "Developer.",
+      text: " Full Stack Developer.",
       className: "text-white dark:text-blue-500",
     },
   ];
+  const strings = words.map((word) => word.text);
   return (
     <div className="flex h-auto w-full bg-black md:h-[40rem] flex-col justify-center items-center relative overflow-hidden  mx-auto py-3 md:py-0">
       <FollowerPointerCard
@@ -50,7 +45,15 @@ const Home = () => {
             Shrikant Gaikwad
           </h1>
           <h1 className=" mt-2 text-3xl  md:mt-4 md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-blue-900 to-neutral-300 ">
-            <TypewriterEffect words={words} />
+            {"<"}
+            <ReactTyped
+              strings={strings}
+              typeSpeed={100}
+              loop
+              backSpeed={20}
+              cursorChar="/>"
+              showCursor={true}
+            />
           </h1>
           <hr className="md:w-[400px] w-60  my-2 justify-center h-2 items-center flex mx-auto" />{" "}
           <p className="mt-10  font-normal text-base md:text-lg text-neutral-300 max-w-lg m-4 md:mx-auto">
